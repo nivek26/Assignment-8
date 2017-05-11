@@ -5,11 +5,16 @@
 #include <QWidget>
 #include <QList>
 
-class fibonacci{
+class fibonacci : public QObject{
+    Q_OBJECT
 public:
     fibonacci();
-   // ~fibonacci(){};
+    
+public slots:
     void getSecquence(QList<int>);
+    
+ signals:
+    void secquenceReady(QList<int> list);
 };
 
 #endif // FIBONACCI_H

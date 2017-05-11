@@ -6,7 +6,9 @@ int main(int argc, char* argv[]){
 
     QApplication app(argc,argv);
 
-    fibonacci newsecq;
+    QList<int> list;
+    fibonacci fib;
+    fib.getSecquence(list);
 
 
     return app.exec();
