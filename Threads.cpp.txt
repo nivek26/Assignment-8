@@ -1,0 +1,41 @@
+#include <iostream>
+#include <thread>
+#include <vector>
+
+using namespace std;
+
+const int SIZE = 10;
+
+void createSequence(vector<int>&list);
+void printSequence(vector<int>&list);
+
+int main(){
+
+
+vector <int> list;
+
+createSequence(list);
+printSequence(list);
+
+}
+
+
+
+void createSequence(vector<int> &list){
+       list.push_back(0);
+       list.push_back(1);
+
+       for(int i = 0; i < 10; i++){
+           if (i > 1) list.push_back((list[i - 1] + list[i - 2]));
+       }
+}
+
+void printSequence(vector<int> &list){
+    for(int i = 0; i < 10; i++){
+        if (i > 0) cout << list[i] << endl;
+    }
+}
+
+
+
+
